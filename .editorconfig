@@ -9,5 +9,7 @@ trim_trailing_whitespace = true   # 줄 끝 불필요한 공백 자동 제거
 insert_final_newline = true       # 파일 마지막에 빈 줄 자동 추가
 
 [*.cs]  # C# 파일에만 적용되는 설정
-csharp_new_line_before_open_brace = none  # 중괄호를 새 줄이 아닌 같은 줄에 (if (x) {)
+
+# 중괄호를 같은 줄에 : types=class/struct, methods=메서드, control_blocks 빼면 if/for는 같은 줄
+csharp_new_line_before_open_brace = types, methods, properties, accessors, anonymous_methods, lambdas, object_collection_array_initializers
 dotnet_diagnostic.IDE0011.severity = none # if문에 중괄호 강제 끄기 (if (x) return; 허용)

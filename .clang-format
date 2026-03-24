@@ -1,0 +1,2 @@
+MaxEmptyLinesToKeep: 100    # 사실상 제한 없음
+KeepEmptyLinesAtTheStartOfBlocks: true  # 블록 시작 빈 줄 유지

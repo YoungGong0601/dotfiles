@@ -1,0 +1,13 @@
+root = true  # 이 파일이 최상위 설정임을 선언. 상위 디렉토리의 .editorconfig를 더 이상 탐색하지 않음
+
+[*]  # 모든 파일에 적용되는 공통 설정
+indent_style = space      # 들여쓰기를 탭 대신 스페이스로
+indent_size = 4           # 스페이스 4칸
+end_of_line = crlf        # 줄 끝 문자 (crlf=Windows, lf=Mac/Linux)
+charset = utf-8           # 파일 인코딩
+trim_trailing_whitespace = true   # 줄 끝 불필요한 공백 자동 제거
+insert_final_newline = true       # 파일 마지막에 빈 줄 자동 추가
+
+[*.cs]  # C# 파일에만 적용되는 설정
+csharp_new_line_before_open_brace = none  # 중괄호를 새 줄이 아닌 같은 줄에 (if (x) {)
+dotnet_diagnostic.IDE0011.severity = none # if문에 중괄호 강제 끄기 (if (x) return; 허용)

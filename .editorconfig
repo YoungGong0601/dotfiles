@@ -1,15 +1,26 @@
-root = true  # 이 파일이 최상위 설정임을 선언. 상위 디렉토리의 .editorconfig를 더 이상 탐색하지 않음
+# 이 파일이 최상위 설정임을 선언. 상위 디렉토리의 .editorconfig를 더 이상 탐색하지 않음
+root = true
 
-[*]  # 모든 파일에 적용되는 공통 설정
-indent_style = space      # 들여쓰기를 탭 대신 스페이스로
-indent_size = 4           # 스페이스 4칸
-end_of_line = crlf        # 줄 끝 문자 (crlf=Windows, lf=Mac/Linux)
-charset = utf-8           # 파일 인코딩
-trim_trailing_whitespace = true   # 줄 끝 불필요한 공백 자동 제거
-insert_final_newline = true       # 파일 마지막에 빈 줄 자동 추가
+# 모든 파일에 적용되는 공통 설정
+[*]
+# 들여쓰기를 탭 대신 스페이스로
+indent_style = space
+# 스페이스 4칸
+indent_size = 4
+# 줄 끝 문자 (crlf=Windows, lf=Mac/Linux)
+end_of_line = crlf
+# 파일 인코딩
+charset = utf-8
+# 줄 끝 불필요한 공백 자동 제거 비활성화
+trim_trailing_whitespace = false
+# # 파일 마지막에 빈 줄 자동 추가
+# insert_final_newline = true
 
-[*.cs]  # C# 파일에만 적용되는 설정
-
-# 중괄호를 같은 줄에 : types=class/struct, methods=메서드, control_blocks 빼면 if/for는 같은 줄
+# C# 파일에만 적용되는 설정
+[*.cs]
+# 중괄호를 새 줄에 시작할 대상 지정
+# types=class/struct, methods=메서드, properties=프로퍼티
+# control_blocks를 빼면 if/for는 같은 줄에 중괄호
 csharp_new_line_before_open_brace = types, methods, properties, accessors, anonymous_methods, lambdas, object_collection_array_initializers
-dotnet_diagnostic.IDE0011.severity = none # if문에 중괄호 강제 끄기 (if (x) return; 허용)
+# if문에 중괄호 강제 끄기 (if (x) return; 허용)
+dotnet_diagnostic.IDE0011.severity = none

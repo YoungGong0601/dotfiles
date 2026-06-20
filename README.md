@@ -12,15 +12,17 @@
 
 ### 1. 클론
 ```cmd
-git clone https://github.com/YoungGong0601/dotfiles.git C:\Users\사용자명\dotfiles
+git clone https://github.com/YoungGong0601/dotfiles.git %USERPROFILE%\dotfiles
 ```
 
-### 2. 심볼릭 링크 생성 (관리자 권한 CMD)
-```cmd
-mklink C:\Users\사용자명\.editorconfig C:\Users\사용자명\dotfiles\.editorconfig
-mklink C:\Users\사용자명\.clang-format C:\Users\사용자명\dotfiles\.clang-format
-mklink C:\Users\사용자명\.gitconfig C:\Users\사용자명\dotfiles\.gitconfig
-```
+### 2. 자동 설정 실행
+`oneClickSetup.bat` 더블클릭만 하면 끝입니다.
+
+- 관리자 권한이 **자동으로 승격**됩니다 (UAC 창에서 "예" 클릭)
+- dotfiles 폴더 경로를 **자동으로 인식**합니다 (입력 불필요)
+- 심볼릭 링크를 자동 생성하고, 기존 파일이 있으면 `.bak` 으로 백업합니다
+
+> 명령줄에서 실행하려면: `%USERPROFILE%\dotfiles\oneClickSetup.bat`
 
 ### 3. 완료
 이후 설정 변경 시 `dotfiles` 폴더에서 수정 후 푸시하면 자동 동기화됩니다.
